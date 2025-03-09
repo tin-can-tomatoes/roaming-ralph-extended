@@ -12,7 +12,7 @@ I tried to leave comments in a lot of places, including the build configuration,
 
 
 ### What's different from normal Roaming Ralph?
-  - No UI text (not novel enough bother with it)
+  - No UI text (not novel enough to bother with it)
   - Uses the meson build system (no technical reason; I just prefer it.)
   - Rudimentary gamepad support (tested with wired Xbox One controller on Linux)
   - Ability to remap keyboard keys and controller buttons via config files
