@@ -1,0 +1,76 @@
+---
+BasedOnStyle: WebKit
+IndentWidth: 2
+---
+Language: Cpp
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: true
+AlignOperands: AlignAfterOperator
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Empty
+AllowShortEnumsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Allman
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+BreakStringLiterals: true
+ColumnLimit: 86
+IncludeBlocks: Regroup
+IncludeCategories:
+    # Panda3d & other system libraries
+
+    # C++ standard libs
+    # Game / game lib headers
+  - Regex:           '<([a-z]+_[a-z]+|game|player).h>'
+    Priority:        4
+    SortPriority:    4
+    CaseSensitive:   true
+    # Config header
+  - Regex:           '<config.h>'
+    Priority:        1
+    SortPriority:    1
+    # Panda3d & other system libraries
+  - Regex:           '<[a-z_0-9]+.h>'
+    Priority:        3
+    SortPriority:    3
+    # C++ standard libs
+  - Regex:           '<[a-z]+>'
+    Priority:        2
+    SortPriority:    2
+    # Quoted headers
+  - Regex:           '"[a-z].h"'
+    Priority:        5
+    SortPriority:    5
+    # Anything else
+  - Regex:           '.+'
+    Priority:        6
+    SortPriority:    6
+
+IndentAccessModifiers: true
+IndentCaseLabels: true
+IndentExternBlock: AfterExternBlock
+IndentPPDirectives: AfterHash
+InsertBraces: true
+InsertNewlineAtEOF: true
+LineEnding: LF
+MainIncludeChar: AngleBracket
+# Force pointers to the type for C++.
+DerivePointerAlignment: false
+PointerAlignment: Left
+ReferenceAlignment: Left
+---

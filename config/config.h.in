@@ -1,0 +1,23 @@
+#pragma once
+
+#define GAME_TITLE_STR "@GAME_TITLE_STR@"
+#define GAME_SLUG_STR "@GAME_SLUG_STR@"
+#define GAME_VERSION_STR "@GAME_VERSION_STR@"
+#mesondefine GAME_VERSION_MAJOR
+#mesondefine GAME_VERSION_MINOR
+#mesondefine GAME_VERSION_MICRO
+#mesondefine GAME_DEBUG_BUILD
+#mesondefine GAME_SHOW_COLLIDERS
+
+#mesondefine GAME_HAS_EIGEN3
+#mesondefine GAME_HAS_BULLET
+
+#mesondefine DEBUG_LOG_KEYBOARD
+#mesondefine DEBUG_LOG_GAMEPAD
+
+
+#ifdef GAME_DEBUG_BUILD
+#  define DBG_ONLY(code) code
+#else
+#  define DBG_ONLY(code)
+#endif
